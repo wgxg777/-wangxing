@@ -1,0 +1,9 @@
+/* VitePress raw 容器样式 */
+.vp-raw {
+  padding: 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  margin: 16px 0;
+}
+

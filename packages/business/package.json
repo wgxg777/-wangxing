@@ -1,0 +1,50 @@
+{
+  "name": "@wangxing777/business",
+  "version": "0.1.0",
+  "description": "Vue 3 业务组件库",
+  "keywords": ["vue", "vue3", "components", "element-plus", "ui"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/your-repo.git",
+    "directory": "packages/business"
+  },
+  "homepage": "https://github.com/your-username/your-repo#readme",
+  "bugs": {
+    "url": "https://github.com/your-username/your-repo/issues"
+  },
+  "private": false,
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "sideEffects": ["*.css", "*.vue"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "peerDependencies": {
+    "vue": ">=3.4",
+    "element-plus": ">=2.7.0"
+  },
+  "devDependencies": {
+    "typescript": "catalog:prod",
+    "vite": "catalog:prod",
+    "vue": "catalog:prod",
+    "@vitejs/plugin-vue": "catalog:prod",
+    "vite-plugin-dts": "catalog:prod",
+    "element-plus": "catalog:prod"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "echo 'TODO: add eslint'",
+    "test": "echo 'TODO: add tests'"
+  }
+}

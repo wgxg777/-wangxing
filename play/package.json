@@ -1,0 +1,21 @@
+{
+  "name": "play",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "catalog:prod",
+    "@wangxing777/business": "workspace:*",
+    "element-plus": "catalog:prod"
+  },
+  "devDependencies": {
+    "vite": "catalog:prod",
+    "@vitejs/plugin-vue": "catalog:prod"
+    
+    
+  }
+}
