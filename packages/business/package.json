@@ -1,6 +1,6 @@
 {
   "name": "@wangxing777/business",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Vue 3 业务组件库",
   "keywords": ["vue", "vue3", "components", "element-plus", "ui"],
   "author": "Your Name",
@@ -45,6 +45,8 @@
     "build": "vite build",
     "dev": "vite",
     "lint": "echo 'TODO: add eslint'",
-    "test": "echo 'TODO: add tests'"
+    "test": "echo 'TODO: add tests'",
+    "prepublishOnly": "pnpm run build",
+    "publish:npm": "npm publish --access public"
   }
 }

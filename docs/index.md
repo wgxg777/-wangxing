@@ -1,25 +1,77 @@
-# 王兴组件库
+---
+layout: home
 
-基于 Vue 3 + Element Plus 的业务组件库。
+hero:
+  name: 王兴组件库
+  text: 基于 Vue 3 + Element Plus
+  tagline: 开箱即用的业务组件库，让开发更高效
+  actions:
+    - theme: brand
+      text: 快速开始
+      link: /guide/getting-started
+    - theme: alt
+      text: 组件列表
+      link: /components/button
+    - theme: alt
+      text: GitHub
+      link: https://github.com/wgxg777/-wangxing
+
+features:
+  - icon: 🚀
+    title: 开箱即用
+    details: 提供完整的 TypeScript 类型定义，支持按需导入和全局安装
+  - icon: 🎨
+    title: 基于 Element Plus
+    details: 继承 Element Plus 的设计语言，保持一致的用户体验
+  - icon: 📦
+    title: 业务组件封装
+    details: 针对常见业务场景进行封装，减少重复代码
+  - icon: ⚡️
+    title: Vue 3 + Vite
+    details: 使用最新的 Vue 3 Composition API 和 Vite 构建工具
+---
+
+## 安装
+
+::: code-group
+```bash [npm]
+npm install @wangxing777/business element-plus
+```
+
+```bash [pnpm]
+pnpm add @wangxing777/business element-plus
+```
+
+```bash [yarn]
+yarn add @wangxing777/business element-plus
+```
+:::
 
 ## 快速开始
 
-安装依赖：
-```bash
-pnpm add @wangxing777/business vue element-plus
-```
+### 全局安装（推荐）
 
-全局引入：
-```ts
+```typescript
 import { createApp } from 'vue'
 import ElementPlus from 'element-plus'
+import WangXingBusiness from '@wangxing777/business'
 import 'element-plus/dist/index.css'
-import App from './App.vue'
+import '@wangxing777/business/style.css'
 
-createApp(App).use(ElementPlus).mount('#app')
+const app = createApp(App)
+app.use(ElementPlus)
+app.use(WangXingBusiness) // 自动注册所有组件
+app.mount('#app')
 ```
 
-## 组件列表
+### 按需导入
 
-- [Button 按钮](/components/button)
-- [BaseTable 基础表格](/components/base-table)
+```typescript
+import { WxButton, WxBaseTable } from '@wangxing777/business'
+
+export default {
+  components: { WxButton, WxBaseTable }
+}
+```
+
+
