@@ -19,5 +19,7 @@ pnpm --filter docs dev
 - 组件导出：`packages/business/src/index.ts` 提供默认与命名导出。
 - 构建：`packages/business/vite.config.ts` 采用 Vite 库模式并生成 dts。
 - 文档：`docs` 通过 VitePress，示例位于 `docs/demos`。
-```
-文档访问https://wgxg777.github.io/-wangxing/
+
+## 文档访问
+
+[https://wgxg777.github.io/-wangxing/](https://wgxg777.github.io/-wangxing/)
