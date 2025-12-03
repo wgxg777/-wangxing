@@ -8,7 +8,8 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       name: 'WangXingBusiness',
-      formats: ['es', 'cjs']
+      formats: ['es', 'cjs'],
+      fileName: (format) => format === 'es' ? 'index.es.js' : 'index.js'
     },
     rollupOptions: {
       // Do not bundle peer dependencies; expect consumer to provide them
