@@ -37,7 +37,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build business package
-        run: pnpm --filter @wangxing/business run build
+        run: pnpm --filter @wangxing777/business run build
 
       - name: Build docs
         run: pnpm --filter docs run build
