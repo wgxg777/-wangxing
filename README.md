@@ -20,3 +20,4 @@ pnpm --filter docs dev
 - 构建：`packages/business/vite.config.ts` 采用 Vite 库模式并生成 dts。
 - 文档：`docs` 通过 VitePress，示例位于 `docs/demos`。
 ```
+文档访问https://wgxg777.github.io/-wangxing/
