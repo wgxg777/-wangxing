@@ -23,6 +23,7 @@
   "sideEffects": ["*.css", "*.vue"],
   "exports": {
     ".": {
+      "development": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "import": "./dist/index.es.js",
       "require": "./dist/index.js"

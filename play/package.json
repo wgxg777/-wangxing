@@ -8,14 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "catalog:prod",
+    "@element-plus/icons-vue": "^2.3.2",
     "@wangxing777/business": "workspace:*",
-    "element-plus": "catalog:prod"
+    "element-plus": "catalog:prod",
+    "vue": "catalog:prod",
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
-    "vite": "catalog:prod",
-    "@vitejs/plugin-vue": "catalog:prod"
-    
-    
+    "@vitejs/plugin-vue": "catalog:prod",
+    "vite": "catalog:prod"
   }
 }

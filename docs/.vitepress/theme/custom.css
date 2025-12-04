@@ -1,3 +1,83 @@
+/**
+ * 自定义样式
+ * 可以覆盖 VitePress 默认主题的样式
+ */
+
+:root {
+  /* 品牌色 */
+  --vp-c-brand-1: #409eff;
+  --vp-c-brand-2: #66b1ff;
+  --vp-c-brand-3: #3a8ee6;
+  
+  /* 首页 Hero */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #409eff 30%, #66b1ff);
+  
+  /* 代码块 */
+  --vp-code-block-bg: #f6f8fa;
+}
+
+.dark {
+  --vp-code-block-bg: #161b22;
+}
+
+/* 首页 Hero 渐变动画 */
+.VPHero .name {
+  background: linear-gradient(120deg, #409eff 30%, #66b1ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 3s ease infinite;
+  background-size: 200% auto;
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+/* 优化卡片样式 */
+.VPFeature {
+  transition: all 0.3s;
+}
+
+.VPFeature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* 代码块样式优化 */
+.vp-code-group {
+  margin: 16px 0;
+}
+
+div[class*='language-'] {
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* 表格样式 */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: 1px solid var(--vp-c-divider);
+  padding: 12px 16px;
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+
 /* VitePress raw 容器样式 */
 .vp-raw {
   padding: 20px;
@@ -5,5 +85,109 @@
   border-radius: 8px;
   background: var(--vp-c-bg);
   margin: 16px 0;
+}
+
+/* 优化移动端体验 */
+@media (max-width: 768px) {
+  .VPHero .name {
+    font-size: 32px !important;
+  }
+}
+
+/* ==================== 侧边栏菜单美化 ==================== */
+
+/* 侧边栏容器 */
+.VPSidebar {
+  background: var(--vp-c-bg);
+}
+
+/* 侧边栏分组标题 */
+.VPSidebarItem.level-0 .text {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--vp-c-text-1);
+  padding: 8px 0;
+}
+
+/* 菜单项样式 */
+.VPSidebarItem.level-1 .link {
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 菜单项悬停效果 */
+.VPSidebarItem.level-1 .link:hover {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-brand-1);
+}
+
+/* 激活状态 */
+.VPSidebarItem.level-1.is-active .link {
+  background: linear-gradient(120deg, rgba(64, 158, 255, 0.1) 0%, rgba(102, 177, 255, 0.1) 100%);
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  border-left: 3px solid var(--vp-c-brand-1);
+  padding-left: 13px;
+}
+
+/* 激活项左侧装饰条 */
+.VPSidebarItem.level-1.is-active .link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-2) 100%);
+  border-radius: 0 2px 2px 0;
+}
+
+/* 菜单项图标（如果有的话） */
+.VPSidebarItem .link .icon {
+  margin-right: 8px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.VPSidebarItem.is-active .link .icon,
+.VPSidebarItem .link:hover .icon {
+  opacity: 1;
+}
+
+/* 侧边栏分割线 */
+.VPSidebar .group + .group {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--vp-c-divider-light);
+}
+
+/* 深色模式优化 */
+.dark .VPSidebarItem.level-1.is-active .link {
+  background: linear-gradient(120deg, rgba(64, 158, 255, 0.15) 0%, rgba(102, 177, 255, 0.15) 100%);
+}
+
+/* 移动端侧边栏优化 */
+@media (max-width: 960px) {
+  .VPSidebar {
+    padding: 16px;
+  }
+  
+  .VPSidebarItem.level-1 .link {
+    padding: 10px 16px;
+  }
+}
+
+/* 添加平滑滚动动画 */
+.VPSidebar {
+  scroll-behavior: smooth;
+}
+
+/* 菜单项点击反馈 */
+.VPSidebarItem.level-1 .link:active {
+  transform: scale(0.98);
 }
 
