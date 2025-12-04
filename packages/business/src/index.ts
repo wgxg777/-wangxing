@@ -6,6 +6,8 @@ export { default as WxTooltip } from './wx-tooltip/index.vue'
 // 工具/类型导出
 export { SelectedItemType, getIcon } from './wx-button/util'
 export type { BaseTableColumn, BaseTableProps } from './wx-base-table/useBaseTable'
+export { default as WxDialog } from './wx-dialog/useDialog'
+export type { WxDialogOptions } from './wx-dialog/type'
 
 // 所有组件
 import WxButton from './wx-button/index.vue'

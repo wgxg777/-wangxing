@@ -3,6 +3,7 @@ import Home from './views/Home.vue'
 import ButtonDemo from './views/ButtonDemo.vue'
 import TableDemo from './views/TableDemo.vue'
 import TooltipDemo from './views/TooltipDemo.vue'
+import DialogDemo from './views/DialogDemo.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/tooltip',
     name: 'Tooltip',
     component: TooltipDemo
+  },
+  {
+    path: '/dialog',
+    name: 'Dialog',
+    component: DialogDemo
   }
 ]
 

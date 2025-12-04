@@ -26,6 +26,10 @@
             <el-icon><ChatLineSquare /></el-icon>
             <span>Tooltip 提示</span>
           </el-menu-item>
+          <el-menu-item index="/dialog">
+            <el-icon><DocumentCopy /></el-icon>
+            <span>Dialog 弹窗</span>
+          </el-menu-item>
         </el-menu>
       </el-aside>
       
@@ -37,7 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { HomeFilled, Mouse, Grid, ChatLineSquare } from '@element-plus/icons-vue'
+import { HomeFilled, Mouse, Grid, ChatLineSquare, DocumentCopy } from '@element-plus/icons-vue'
 </script>
 
 <style>

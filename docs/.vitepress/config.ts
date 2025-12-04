@@ -51,7 +51,8 @@ export default defineConfig({
           items: [
             { text: 'Button 按钮', link: '/components/button' },
             { text: 'BaseTable 基础表格', link: '/components/base-table' },
-            { text: 'Tooltip 提示', link: '/components/tooltip' }
+            { text: 'Tooltip 提示', link: '/components/tooltip' },
+            { text: 'Dialog 弹窗', link: '/components/dialog' }
           ]
         }
       ]
